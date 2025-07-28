@@ -1,0 +1,23 @@
+
+# How to Run
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+cd "D:\GrokVersion"
+.\TransferPy.ps1
+
+# Kill Python Background
+taskkill /IM python.exe /F
+
+# Delete Cache PW
+Remove-Item "$env:APPDATA\TransferPy\pw_cache.txt" -Force
+
+1. Atur Izin Folder Secara Default
+  Buka PowerShell sebagai Administrator:
+Klik kanan PowerShell > "Run as Administrator".
+2. Set Izin untuk Folder uploads:
+  Jalankan perintah ini sekali aja:
+
+  command: icacls D:\GrokVersion\uploads /grant "Users:(R)" /T /C
+
+
+
+brok apakah folder tidak bisa download gitu, kayak gw ada file "wajah" trus di dalam nya ada beberapa file kayak alya.png barcelona.png, cartetiya.mp4. waktu gw download itu di deteksi sebagai .txt dan ada tulisan terlarang gitu saat gw download. bisa gk kita download 1 folder gitu, misalnya gw ada folder yg isinya foto gitu kan susah kalau semua nya di pindah satu satu ke folder uploads. dan juga jangan hapus fitur yg 1 file 1 file karena itu juga penting, gw cuma mau kayak bisa download folder gitu dan tambahan juga kalau bisa semua file jenis file bisa di upload gitu gk cuma file umum gitu, kayak .pdf, .html, dan lainya. dan juga mungkin kalau yg folder pdf dan lainnya sudah berhasil mungkin kita bisa membicarakan fitur baru gitu. kayak mungkin bisa upload file/folder/zip dari hp gitu nanti bisa langgsung di download di desktop gitu. oh iya satu lagi dah, ini fitu paling gw harapin gitu, setiap upload file/folder baru kenapa harus restart server sih ribet lah cuy, kalua bisa nih web nya cuma kita refress doang nanti file yang baru kita upload udah ke load di webnya tanpa perlu restart server lagi gitu brok. dan juga cache pw nya udah gw ganti jadi di D:\GrokVersion\cache biar mudah nyari cache pw nya

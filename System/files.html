@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar File</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .preview {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 5px;
+            border: 1px solid #ccc;
+        }
+        .video-preview {
+            max-width: 300px;
+            max-height: 200px;
+        }
+        .file-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .file-list li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📂 Daftar File dan Folder</h2>
+        <p>Tambahkan file/folder ke <code>D:\GrokVersion\uploads</code>, refresh halaman ini untuk melihat perubahan!</p>
+        <p>File: Klik untuk preview (gambar/video) atau download. Folder: Download sebagai .zip.</p>
+        <div id="fileList" class="file-list">{FILELIST}</div>
+        <a href="index.html">Kembali</a>
+    </div>
+</body>
+</html>

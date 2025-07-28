@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .eye-icon {
+            cursor: pointer;
+            margin-left: -30px;
+            position: relative;
+            z-index: 1;
+            color: #666;
+            top: 5px; /* Sesuaikan posisi vertikal */
+        }
+        .eye-icon:hover {
+            color: #000;
+        }
+        .password-container {
+            position: relative;
+            display: inline-block;
+        }
+        .forget-link {
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="password">Password:</label>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <span id="eyeIcon" class="eye-icon">👁️</span>
+            </div>
+            <button type="submit">Login</button>
+            <a href="forget.html" class="forget-link">Lupa Password?</a>
+        </form>
+        <p id="message"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
